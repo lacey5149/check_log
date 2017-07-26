@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  to: MyString
+  from: MyString
+  mailed_from: MyString
+  value: 9.99
+  date_received: 2017-07-24
+  date_released: 2017-07-24
+
+two:
+  to: MyString
+  from: MyString
+  mailed_from: MyString
+  value: 9.99
+  date_received: 2017-07-24
+  date_released: 2017-07-24

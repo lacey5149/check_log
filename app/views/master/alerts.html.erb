@@ -1,0 +1,35 @@
+<h1>Check Alerts</h1>
+<p>Checks that have been received and not released.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Alert</th>
+      <th>Client Name</th>
+      <th>Check Received Date</th>
+      <th>Check Written Out To</th>
+      <th>Check Amount</th>
+      <th>Release Check By</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <% @checks.each do |check| %>
+     <tr>
+    <th scope="row">
+    <td><% if ((Date.today - check.date_received).to_i) >= 3 %>
+    	RED
+    	<% else %> 
+    	ORANGE	
+    	<% end %></th>
+      <td><%= check.account.client.name %></td> 
+      <td><%= check.date_received %></td>
+      <td><%=check.to %></td>
+      <td><%=check.value %></td>
+      <td><%=check.date_received + 3.days %> </td>
+    </tr>
+    <% end %>
+ 
+  </tbody>
+</table>

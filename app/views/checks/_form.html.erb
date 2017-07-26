@@ -1,0 +1,52 @@
+<%= form_with(model: check, local: true) do |form| %>
+  <% if check.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(check.errors.count, "error") %> prohibited this check from being saved:</h2>
+
+      <ul>
+      <% check.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :to %>
+    <%= form.text_field :to, id: :check_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from %>
+    <%= form.text_field :from, id: :check_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mailed_from %>
+    <%= form.text_field :mailed_from, id: :check_mailed_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :account %>
+    <%= form.collection_select(:account_id, Account.all, :id, :account_number, prompt: true) %>
+    </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value, id: :check_value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_received %>
+    <%= form.text_field :date_received, id: :check_date_received %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_released %>
+    <%= form.text_field :date_released, id: :check_date_released %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

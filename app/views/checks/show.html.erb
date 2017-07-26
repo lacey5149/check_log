@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>To:</strong>
+  <%= @check.to %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @check.from %>
+</p>
+
+<p>
+  <strong>Mailed from:</strong>
+  <%= @check.mailed_from %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @check.value %>
+</p>
+
+<p>
+  <strong>Date received:</strong>
+  <%= @check.date_received %>
+</p>
+
+<p>
+  <strong>Date released:</strong>
+  <%= @check.date_released %>
+</p>
+
+<%= link_to 'Edit', edit_check_path(@check) %> |
+<%= link_to 'Back', checks_path %>
