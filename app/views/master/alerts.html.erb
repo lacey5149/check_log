@@ -28,6 +28,8 @@
       <td><%=check.to %></td>
       <td><%=check.value %></td>
       <td><%=check.date_received + 3.days %> </td>
+      <td><%= link_to 'Show', check %></td>
+      <td><%= link_to 'Edit', edit_check_path(check) %></td>
     </tr>
     <% end %>
  

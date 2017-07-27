@@ -21,6 +21,7 @@ class MasterController < ApplicationController
 	  		puts "test for custody for third party, need to include date here."
 	  		@accounts.push(check.account)
 	  	end
+  	
   	end
   end
 
