@@ -4,7 +4,8 @@ class ChecksController < ApplicationController
   # GET /checks
   # GET /checks.json
   def index
-    @checks = Check.all
+    col = ActiveRecord::Base.connection.quote_column_name(params[:order])
+    @checks = Check.all.page(params[:page]).order(col)
   end
 
   # GET /checks/1

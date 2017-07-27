@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= form.label :to %>
-    <%= form.text_field :to, id: :check_to %>
+    <%= form.text_field :to, id: :check_to, :required => true%>
   </div>
 
   <div class="field">
     <%= form.label :from %>
-    <%= form.text_field :from, id: :check_from %>
+    <%= form.text_field :from, id: :check_from, :required => true %>
   </div>
 
   <div class="field">
     <%= form.label :mailed_from %>
-    <%= form.text_field :mailed_from, id: :check_mailed_from %>
+    <%= form.text_field :mailed_from, id: :check_mailed_from, :required => true %>
   </div>
 
   <div class="field">
@@ -33,12 +33,12 @@
 
   <div class="field">
     <%= form.label :value %>
-    <%= form.text_field :value, id: :check_value %>
+    <%= form.text_field :value, id: :check_value, :required => true %>
   </div>
 
   <div class="field">
     <%= form.label :date_received %>
-    <%= form.text_field :date_received, id: :check_date_received %>
+    <%= form.text_field :date_received, id: :check_date_received, :required => true %>
   </div>
 
   <div class="field">

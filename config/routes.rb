@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'master#view_checks'
-  get '/' => 'master#view_checks', as: :root_path
+  get '/' => 'checks#index', as: :root_path
 
   get 'new_check' => 'checks#new'
 

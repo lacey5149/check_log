@@ -1,2 +1,6 @@
 <h1>Master#custody_accounts</h1>
 <p>Find me in app/views/master/custody_accounts.html.erb</p>
+
+<% @accounts.each do |account| %> 
+<li><%=account.account_number %></li>
+<% end %>
