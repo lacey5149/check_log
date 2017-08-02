@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
-  
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   root 'checks#index'
 
   get 'new_check' => 'checks#new'

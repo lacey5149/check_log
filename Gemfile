@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'kaminari'
+gem 'devise'
+gem 'cancancan'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
@@ -56,9 +59,7 @@ group :development do
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 
-gem 'devise'
 
-gem 'cancancan'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
